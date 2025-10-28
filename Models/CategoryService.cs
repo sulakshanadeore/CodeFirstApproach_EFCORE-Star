@@ -17,8 +17,8 @@ namespace CodeFirstApproach_EFCORE.Models
 
         public void Delete(int id)
         {
-           Category c= _context.Categories.FirstOrDefault(p => p.CategroyID = id);
-            _context.Remove(c);
+           Category c= _context.Categories.FirstOrDefault(p => p.CategoryID ==id);
+            _context.Categories.Remove(c);
             _context.SaveChanges();
         }
 

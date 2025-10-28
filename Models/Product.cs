@@ -9,7 +9,7 @@ namespace CodeFirstApproach_EFCORE.Models
         public int Prodid { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(30)]
         public string ProdName { get; set; }
 
         [Required]

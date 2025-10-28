@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CodeFirstApproach_EFCORE.Migrations
 {
     [DbContext(typeof(ShoppingDbContext))]
-    [Migration("20251028103659_Initial")]
-    partial class Initial
+    [Migration("20251028171920_Mig1")]
+    partial class Mig1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,8 +61,8 @@ namespace CodeFirstApproach_EFCORE.Migrations
 
                     b.Property<string>("ProdName")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("Prodid");
 

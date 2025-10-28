@@ -5,7 +5,7 @@
 namespace CodeFirstApproach_EFCORE.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class Mig1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,7 +30,7 @@ namespace CodeFirstApproach_EFCORE.Migrations
                 {
                     Prodid = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ProdName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    ProdName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     Price = table.Column<float>(type: "real", nullable: false),
                     CategoryID = table.Column<int>(type: "int", nullable: false)
                 },

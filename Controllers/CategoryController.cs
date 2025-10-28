@@ -16,10 +16,13 @@ namespace CodeFirstApproach_EFCORE.Controllers
         }
         // GET: api/<CategoryController>
         [HttpGet]
-        public IEnumerable<Category> Get()
+        public IEnumerable<Category> GetProductByID()
         {
             return _service.GetAll();
         }
+
+
+
 
         // GET api/<CategoryController>/5
         [HttpGet("{id}")]

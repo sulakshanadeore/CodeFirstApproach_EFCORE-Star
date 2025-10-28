@@ -5,8 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<ShoppingDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ShoppingDB-Star_CnString")));
-builder.Services.AddTransient<ICategoryService, CategoryService>(); 
-
+builder.Services.AddTransient<ICategoryService, CategoryService>();
+builder.Services.AddTransient<IProductOperations, ProductServiceOperations>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
